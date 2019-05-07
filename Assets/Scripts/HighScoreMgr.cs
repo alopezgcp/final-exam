@@ -59,11 +59,11 @@ public class HighScoreMgr : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("1Intro");
     }
 
-    public void GoToCredits()
+    public void EndGame()
     {
-        SceneManager.LoadScene("EndMenu");
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }

@@ -128,10 +128,4 @@ public class PlayerScoreMgr : MonoBehaviour
         else
             playerScoresText.text = "You must provide a name to begin playing.";
     }
-
-    public void QuitGame()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit();
-    }
 }

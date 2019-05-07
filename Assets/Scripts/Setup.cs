@@ -10,27 +10,20 @@ public class Setup : MonoBehaviour
     public Toggle slideLock;
     public Dropdown gameTime;
 
-    private void Update()
-    {
-    }
-
     public void NextScene()
     {
         Stats.size = sizeSlider.value;
         Stats.speed = speedSlider.value;
 
         if (gameTime.value == 0)
+        {
             Stats.gameIsLimitted = false;
+            Stats.startTime = 0f;
+        }
         else
             Stats.gameIsLimitted = true;
 
         SceneManager.LoadScene("2HighScores");
-    }
-
-    public void QuitGame()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-        Application.Quit();
     }
 
     public void ToggleSliders()
